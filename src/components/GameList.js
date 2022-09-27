@@ -10,12 +10,12 @@ const linux = require("../icons/Linux.png");
 const apple = require("../icons/Apple.png");
 const nintendo = require("../icons/Nintendo.png");
 
-function GameList({ games }) {
+function GameList({ games, handleSelectedGame }) {
   return (
     <div className="container d-flex justify-content-center">
       <div className="row d-flex justify-content-center">
         {games.map((game) => (
-          <div className="col-sm-10 col-md-5 col-lg-3 col-xl-2 game-container" key={game.id}>
+          <div className="col-sm-10 col-md-5 col-lg-3 col-xl-2 game-container" key={game.id} onClick={() => handleSelectedGame(game)}>
             <div className="img-container">
               <img src={game["background_image"]} className="game-img" alt="" />
             </div>
