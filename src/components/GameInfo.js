@@ -72,13 +72,13 @@ function GameInfo({ selectedGame }) {
           <div>Platforms:</div>
           <div>
             {selectedGame.platforms.map((platform) => (
-              <span className="selected-game-platform" key={platform.id}>{platform.platform.name}</span>
+              <span className="selected-game-platform" key={platform.platform.id} >{platform.platform.name}</span>
             ))}
           </div>
           <div>Tags:</div>
           <div>
             {selectedGame.tags.map((tag) => (
-              <span className="selected-game-tag" key={tag.id}>{tag.name}</span>
+              <span className="selected-game-tag" key={tag.id} >{tag.name}</span>
             ))}
           </div>
         </div>
