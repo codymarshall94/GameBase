@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 2rem;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}
+
+.game-section {
+    color: white;
+    padding-left: 5%;
+}
