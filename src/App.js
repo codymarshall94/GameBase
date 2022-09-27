@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import GameInfo from "./components/GameInfo";
-import GameList from "./components/GameList";
 import Header from "./components/Header";
-import Loading from "./components/Loading";
-import Pagination from "./components/Pagination";
+import Home from "./components/Home";
 
 const axios = require("axios");
 // https://rawg.io/
@@ -48,30 +47,24 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="container d-flex justify-content-center flex-column">
-        <Header />
-        <Pagination
-          getPreviousPage={getPreviousPage}
-          getNextPage={getNextPage}
-          prevPage={prevPage}
-        />
-        <h1 className="game-section">Current Games</h1>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
-            <GameList games={games} handleSelectedGame={handleSelectedGame} />{" "}
-            <Pagination
-              getPreviousPage={getPreviousPage}
+    <>
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
               getNextPage={getNextPage}
-              prevPage={prevPage}
+              getPreviousPage={getPreviousPage}
+              handleSelectedGame={handleSelectedGame}
+              games={games}
+              isLoading={isLoading}
             />
-          </>
-        )}
-      </div>
-      <GameInfo selectedGame={selectedGame} />
-    </div>
+          }
+        />
+        <Route path="/info" element={<GameInfo selectedGame={selectedGame}/>} />
+      </Routes>
+    </>
   );
 }
 
