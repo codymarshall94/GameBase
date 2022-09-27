@@ -4,6 +4,7 @@ import GameList from "./components/GameList";
 import Header from "./components/Header";
 
 const axios = require('axios');
+// https://rawg.io/
 // 317612d4689e479aa46dc75b7e45ec7d API KEY
 
 function App() {
@@ -21,7 +22,7 @@ const [games, setGames] = useState([]);
   }, []);
   
   return (
-    <div>
+    <div className="container d-flex justify-content-center flex-column">
       <Header />
       <h1 className="game-section">Current Games</h1>
       <GameList games={games}/>
