@@ -1,0 +1,80 @@
+.selected-game-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.selected-game-name {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 4rem;
+}
+
+.selected-game-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.screenshot-container {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.selected-game-general {
+  display: flex;
+  position: absolute;
+  top: 12rem;
+  color: white;
+}
+
+.selected-game-screenshot {
+  width: 12rem;
+  height: 8rem;
+}
+
+.genre {
+  margin: 0 1rem;
+}
+
+.esrb-rating {
+  margin: 0 5rem;
+}
+
+.selected-game-platform-container {
+  display: flex;
+  position: absolute;
+  top: 40%;
+}
+
+.selected-game-platform-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.selected-game-main-info {
+    position: absolute;
+    top: 50%;
+    height: 25%;
+    width: 60%;
+    min-height: 15%;
+    max-height: 40%;
+    padding: 1rem;
+    background-color: #202020DD;
+    color: white;
+    border-radius: 1rem;
+}
+
+.selected-game-platform, .selected-game-tag {
+    padding-right: 1rem;
+}
