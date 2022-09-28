@@ -57,14 +57,14 @@ function App() {
               getNextPage={getNextPage}
               getPreviousPage={getPreviousPage}
               handleSelectedGame={handleSelectedGame}
+              prevPage={prevPage}
               games={games}
               isLoading={isLoading}
             />
           }
         />
         <Route
-          path="/info"
-          element={<GameInfo selectedGame={selectedGame} />}
+          path="/info" element={<GameInfo selectedGame={selectedGame} />}
         />
       </Routes>
     </>
