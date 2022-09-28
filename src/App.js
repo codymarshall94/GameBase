@@ -62,7 +62,10 @@ function App() {
             />
           }
         />
-        <Route path="/info" element={<GameInfo selectedGame={selectedGame}/>} />
+        <Route
+          path="/info"
+          element={<GameInfo selectedGame={selectedGame} />}
+        />
       </Routes>
     </>
   );
