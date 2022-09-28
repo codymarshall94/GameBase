@@ -47,7 +47,6 @@
 .selected-game-screenshot {
   width: 6rem;
   height: auto;
-
 }
 
 
@@ -81,7 +80,15 @@
   background-color: #202020dd;
   color: white;
   border-radius: 1rem;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.main-info-title {
+  color:  rgb(255, 255, 255, 0.3);
+}
+
 
 .selected-game-platform,
 .selected-game-tag {
