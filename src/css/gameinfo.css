@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -9,11 +10,13 @@
 
 .selected-game-name {
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   left: 50%;
   transform: translateX(-50%);
+  width: 95%;
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .selected-game-img {
@@ -25,7 +28,10 @@
 
 .screenshot-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   position: absolute;
+  width: 95%;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
@@ -34,35 +40,96 @@
 .selected-game-general {
   display: flex;
   position: absolute;
-  top: 12rem;
+  top: 13%;
   color: white;
 }
 
 .selected-game-screenshot {
-  width: 12rem;
-  height: 8rem;
+  width: 6rem;
+  height: auto;
+
 }
+
 
 .genre {
   margin: 0 1rem;
 }
 
 .esrb-rating {
-  margin: 0 5rem;
+  margin: 0 1rem;
 }
 
 .selected-game-platform-container {
   display: flex;
   position: absolute;
-  top: 40%;
+  top: 17%;
 }
 
 .selected-game-platform-icon {
-  height: 4rem;
-  width: 4rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .selected-game-main-info {
+  position: absolute;
+  top: 50%;
+  height: auto;
+  width: 95%;
+  min-height: 15%;
+  max-height: 45%;
+  padding: 1.5rem 1rem;
+  background-color: #202020dd;
+  color: white;
+  border-radius: 1rem;
+}
+
+.selected-game-platform,
+.selected-game-tag {
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .selected-game-name {
+    top: 5%;
+    font-size: 4rem;
+  }
+
+  .selected-game-general {
+    top: 15%;
+  }
+  
+  .esrb-rating {
+    margin: 0 5rem;
+  }
+
+  .screenshot-container {
+    top: 25%;
+    flex-wrap: nowrap;
+  }
+
+  .selected-game-screenshot {
+    width: 12%;
+    height: auto;
+    transition: transform .25s ease-in-out;
+  }
+
+  .selected-game-screenshot:hover {
+    transform: scale(2);
+    z-index: 999;
+    box-shadow: 0 12px 11px rgba(33,33,33,1);
+  }
+
+  .selected-game-platform-container {
+    z-index: 998;
+    top: 40%;
+  }
+
+  .selected-game-platform-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .selected-game-main-info {
     position: absolute;
     top: 50%;
     height: 25%;
@@ -70,11 +137,5 @@
     min-height: 15%;
     max-height: 40%;
     padding: 1rem;
-    background-color: #202020DD;
-    color: white;
-    border-radius: 1rem;
-}
-
-.selected-game-platform, .selected-game-tag {
-    padding-right: 1rem;
+  }
 }
