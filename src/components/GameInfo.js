@@ -21,7 +21,7 @@ function GameInfo({ selectedGame }) {
         />
         <div className="selected-game-name">{selectedGame.name}</div>
         <div className="selected-game-general">
-          <div className="esrb-rating">{selectedGame["esrb_rating"].name}</div>
+          <div className="esrb-rating">{selectedGame["esrb_rating"] && selectedGame["esrb_rating"].name ? selectedGame["esrb_rating"].name : "Not Rated"}</div>
           {selectedGame.genres.map((genre) => (
             <div className="genre" key={genre.id}>
               {genre.name}
