@@ -27,7 +27,7 @@ function App() {
         setGames(res.data.results);
         setNextPage(res.data.next);
         setPrevPage(res.data.previous);
-        setTimeout(() => setIsLoading(false), 250);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
