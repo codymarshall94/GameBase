@@ -17,7 +17,7 @@ function GameList({ games, handleSelectedGame }) {
       <div className="row d-flex justify-content-center">
         {games.map((game) => (
           <Link
-            to={`info`}
+            to={`/info`}
             key={game.id}
             className="link-style"
             onClick={() => handleSelectedGame(game)}
